@@ -111,8 +111,8 @@ void ADF4351::init()
 {
   pinMode(pinSS, OUTPUT) ;
   digitalWrite(pinSS, LOW) ;
-  pinMode(PIN_CE, OUTPUT) ;
-  pinMode(PIN_LD, INPUT) ;
+  pinMode(ADF_CE, OUTPUT) ;
+  pinMode(ADF_LD, INPUT) ;
   SPI.begin();
 } ;
 
@@ -318,13 +318,13 @@ int ADF4351::setrf(uint32_t f)
 void ADF4351::enable()
 {
   enabled = true ;
-  digitalWrite(PIN_CE, HIGH) ;
+  digitalWrite(ADF_CE, HIGH) ;
 }
 
 void ADF4351::disable()
 {
   enabled = false ;
-  digitalWrite(PIN_CE, LOW) ;
+  digitalWrite(ADF_CE, LOW) ;
 }
 
 
