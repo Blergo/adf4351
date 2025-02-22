@@ -27,12 +27,12 @@ extern uint32_t steps[];  ///< Array of Frequency Step Values
 #define REF_FREQ_DEFAULT 100000000UL  ///< Default Reference Frequency
 
 
-#define PIN_CE   2    ///< Ard Pin for Chip Enable
-#define PIN_LD   8    ///< Ard Pin for Lock Detect
-#define PIN_SS   9    ///< Ard Pin for SPI Slave Select
-#define PIN_MOSI  11  ///< Ard Pin for SPI MOSI
-#define PIN_MISO  12  ///< Ard Pin for SPI MISO
-#define PIN_SCK  13   ///< Ard Pin for SPI CLK
+#define ADF_CE   2    ///< Ard Pin for Chip Enable
+#define ADF_LD   8    ///< Ard Pin for Lock Detect
+#define ADF_SS   9    ///< Ard Pin for SPI Slave Select
+#define ADF_MOSI  11  ///< Ard Pin for SPI MOSI
+#define ADF_MISO  12  ///< Ard Pin for SPI MISO
+#define ADF_SCK  13   ///< Ard Pin for SPI CLK
 
 
 /*!
@@ -114,7 +114,7 @@ class ADF4351
        @param speed the SPI Serial Speed (see SPI speed values)
        @param order the SPI bit order (see SPI bit order values)
     */
-    ADF4351(byte pin, uint8_t mode, unsigned long  speed, uint8_t order ) ;
+    ADF4351(byte pin, uint8_t mode, unsigned long  speed, BitOrder order ) ;
     /*!
        initialize and start the SPI interface. Call this once after instanciating
        the object
