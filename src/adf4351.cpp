@@ -89,7 +89,7 @@ uint32_t  Reg::getbf(uint8_t start, uint8_t len)
 // ADF4351 settings
 
 
-ADF4351::ADF4351(byte pin, uint8_t mode, unsigned long  speed, uint8_t order )
+ADF4351::ADF4351(byte pin, uint8_t mode, unsigned long  speed, BitOrder order )
 {
   spi_settings = SPISettings(speed, order, mode) ;
   pinSS = pin ;
