@@ -28,7 +28,7 @@ extern uint32_t steps[];  ///< Array of Frequency Step Values
 
 
 #define ADF_CE   2    ///< Ard Pin for Chip Enable
-#define ADF_LD   8    ///< Ard Pin for Lock Detect
+#define ADF_LD   0    ///< Ard Pin for Lock Detect
 #define ADF_SS   9    ///< Ard Pin for SPI Slave Select
 #define ADF_MOSI  11  ///< Ard Pin for SPI MOSI
 #define ADF_MISO  12  ///< Ard Pin for SPI MISO
