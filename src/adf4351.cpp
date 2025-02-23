@@ -337,10 +337,13 @@ void ADF4351::writeDev(int n, Reg r)
   digitalWrite(pinSS, LOW) ;
   delayMicroseconds(10) ;
   i=n ; // not used 
+  SPI1.beginTransaction(spi_settings);
   for ( i = 3 ; i > -1 ; i--) {
     txbyte = (byte) (r.whole >> (i * 8)) ;
+    Serial.println(txbyte);
     SPI1.transfer(txbyte) ;
   }
+  SPI1.endTransaction();
 
   digitalWrite(pinSS, HIGH) ;
   delayMicroseconds(5) ;
