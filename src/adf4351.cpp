@@ -113,7 +113,7 @@ void ADF4351::init()
   digitalWrite(pinSS, LOW) ;
   pinMode(ADF_CE, OUTPUT) ;
   pinMode(ADF_LD, INPUT) ;
-  SPI.begin();
+  SPI1.begin();
 } ;
 
 
@@ -337,7 +337,7 @@ void ADF4351::writeDev(int n, Reg r)
   i=n ; // not used 
   for ( i = 3 ; i > -1 ; i--) {
     txbyte = (byte) (r.whole >> (i * 8)) ;
-    SPI.transfer(txbyte) ;
+    SPI1.transfer(txbyte) ;
   }
 
   digitalWrite(pinSS, HIGH) ;
