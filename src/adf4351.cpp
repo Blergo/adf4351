@@ -340,7 +340,6 @@ void ADF4351::writeDev(int n, Reg r)
   SPI1.beginTransaction(spi_settings);
   for ( i = 3 ; i > -1 ; i--) {
     txbyte = (byte) (r.whole >> (i * 8)) ;
-    Serial.println(txbyte);
     SPI1.transfer(txbyte) ;
   }
   SPI1.endTransaction();
