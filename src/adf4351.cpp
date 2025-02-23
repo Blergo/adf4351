@@ -113,6 +113,8 @@ void ADF4351::init()
   digitalWrite(pinSS, LOW) ;
   pinMode(ADF_CE, OUTPUT) ;
   pinMode(ADF_LD, INPUT) ;
+  SPI1.setTX(ADF_MOSI) ;
+  SPI1.setSCK(ADF_SCK) ;
   SPI1.begin();
 } ;
 
